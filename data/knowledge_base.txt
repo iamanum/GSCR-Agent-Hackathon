@@ -1,0 +1,10 @@
+# GSCR Global Mitigation Policy: Operational Strategy Guide
+
+## High Impact Risk (Critical SKUs)
+If a supplier for a critical SKU faces a disruption or block exceeding 7 calendar days, the agent must prioritize swift alternatives. The optimal alternative must have a lead time of less than 10 days, even if it results in a cost increase of up to 10%. Furthermore, a secondary 'Air Freight' option must be identified if its cost is less than a 20% increase.
+
+## Medium Impact Risk (Non-Critical SKUs)
+For non-critical SKUs, cost containment is prioritized over speed. The cost increase for any new route should not exceed 5%. If current emergency stock levels are above 50% of the minimum stock, the agent should recommend no immediate action, but flag the risk for daily review.
+
+## Documentation & Compliance
+All agent actions, including decisions, cost variances, and route changes, must be logged in the "GSCR-Agent Log." This is mandatory for Legal and Finance review, ensuring full transparency and compliance.

@@ -1,0 +1,18 @@
+[
+  {
+    "sku_id": "CRIT-A101",
+    "name": "High-Density Processor",
+    "current_inventory": 500,
+    "supplier_id": "SUP001", 
+    "min_stock_level": 100,
+    "impact_factor": "High"
+  },
+  {
+    "sku_id": "NON-B202",
+    "name": "Standard Screws",
+    "current_inventory": 5000,
+    "supplier_id": "SUP002",
+    "min_stock_level": 500,
+    "impact_factor": "Low"
+  }
+]

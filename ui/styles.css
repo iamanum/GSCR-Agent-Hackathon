@@ -1,0 +1,242 @@
+/* File: ui/styles.css - Level 3.0: Strategic Control Center */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+
+:root {
+    --bg-color: #050505; /* Deeper Dark */
+    --panel-bg: #141414;
+    --text-color: #E6E6E6;
+    
+    /* NEW PRIMARY ACCENT COLOR: NEON GREEN */
+    --accent-green: #00ffaa; 
+    
+    --critical-red: #FF4757; /* Danger Red */
+    --success-green: #37C074; /* Standard success */
+    
+    /* NEW GLOW EFFECT (Matching Neon Green) */
+    --border-glow: rgba(0, 255, 170, 0.6); 
+}
+
+/* Background Animation for Technical Feel */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Source Code Pro', monospace; /* Professional, Console Font */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Subtle background grid pattern (Wow) */
+    background-image: linear-gradient(0deg, transparent 95%, rgba(20, 20, 20, 0.5) 100%),
+                      linear-gradient(90deg, transparent 95%, rgba(20, 20, 20, 0.5) 100%);
+    background-size: 50px 50px;
+}
+
+/* Header Styling - Focus and Clarity */
+header {
+    background-color: #111;
+    padding: 15px 0;
+    border-bottom: 2px solid var(--accent-green); /* Updated Accent */
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 5px;
+    color: var(--accent-green); /* Updated Accent */
+    letter-spacing: 3px;
+    text-shadow: 0 0 5px var(--border-glow); /* Neon Effect */
+}
+
+#status-container {
+    font-size: 1em;
+    color: var(--success-green);
+    font-weight: 700;
+}
+
+#status-indicator {
+    margin-right: 8px;
+    font-size: 0.8em;
+}
+
+/* Main Layout */
+main {
+    display: flex;
+    flex-grow: 1;
+    padding: 20px;
+    gap: 25px;
+}
+
+.panel {
+    background-color: var(--panel-bg);
+    padding: 25px;
+    border-radius: 8px;
+    /* Updated Box Shadow for Z-depth (Glass/Neon Effect) */
+    box-shadow: 0 0 15px rgba(0, 255, 170, 0.2), 0 0 5px rgba(0, 0, 0, 0.8) inset; /* Updated Glow */
+    border: 1px solid #1f1f1f; 
+    transition: all 0.5s ease;
+}
+
+#left-panel {
+    flex: 2.5;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#right-panel {
+    flex: 1;
+}
+
+/* Panel Content Styling */
+h2 {
+    color: var(--accent-green); /* Updated Accent */
+    font-size: 1.4em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+h2 i {
+    margin-right: 10px;
+}
+
+/* Data Boxes */
+.data-box {
+    margin-bottom: 20px;
+    padding: 18px;
+    background-color: #1d1d1d;
+    border-left: 4px solid var(--accent-green); /* Updated Accent */
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.data-value {
+    color: var(--accent-green); /* Updated Accent */
+    font-weight: 700;
+    font-size: 1.2em;
+    letter-spacing: 0.5px;
+}
+
+/* Log and Visualization */
+#risk-visualization {
+    background-color: #0d0d0d;
+    padding: 25px;
+    text-align: center;
+    min-height: 250px;
+    border: 1px dashed #333;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#log-output {
+    max-height: 350px;
+    overflow-y: scroll; 
+    background-color: #0d0d0d;
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 0.85em;
+}
+
+.log-entry {
+    color: #aaa;
+    margin: 3px 0;
+}
+.log-success { color: var(--success-green); }
+.log-critical { color: var(--critical-red); font-weight: 700; }
+.log-reflection { color: #facc15; } /* Yellow for Agent Thinking */
+
+/* Table Styling for Comparison */
+#alternative-comparison {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #282828;
+}
+
+#options-table {
+    width: 100%;
+    font-size: 0.8em;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#options-table th, #options-table td {
+    padding: 6px;
+    text-align: left;
+    border-bottom: 1px solid #1f1f1f;
+}
+
+#options-table th {
+    color: var(--accent-green);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+/* Highlight the recommended row with a subtle color */
+.recommended-row {
+    background-color: rgba(0, 255, 170, 0.08); /* Light Neon Green BG */
+    color: var(--accent-green);
+    font-weight: 700;
+}
+
+/* Wow Factor Button */
+#approve-btn {
+    width: 100%;
+    padding: 18px;
+    margin-top: 25px;
+    background-color: #333;
+    color: #999;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: 700;
+    cursor: not-allowed;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+/* Agent Action State: The ULTIMATE WOW */
+#approve-btn:not([disabled]) {
+    background-color: var(--critical-red);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 25px var(--critical-red); /* Intense Glowing Effect */
+    animation: pulse-red 1.5s infinite;
+}
+
+/* CRITICAL STATE OVERRIDE (Wow Factor) - Sophisticated Alert */
+.system-critical header {
+    background-color: rgba(5, 5, 5, 0.95); /* Deep transparent black */
+    border-bottom: 2px solid var(--critical-red); /* Red danger border */
+    box-shadow: 0 0 15px var(--critical-red); /* Glowing Effect */
+    animation: flash-red 0.5s infinite alternate; /* Flashing animation rahegi */
+}
+.system-critical header h1 {
+    color: var(--critical-red); /* Header text red ho jayega */
+    text-shadow: 0 0 8px var(--critical-red);
+}
+.system-critical #status-container {
+    color: var(--critical-red) !important;
+}
+
+/* Add this class to make the status indicator blink when critical */
+.critical-alert #status-indicator {
+    animation: pulse-red 1s infinite alternate;
+}
+
+/* CSS Keyframe Animations for Wow Factor */
+@keyframes pulse-red {
+    0% { transform: scale(1); box-shadow: 0 0 20px var(--critical-red); }
+    50% { transform: scale(1.02); box-shadow: 0 0 30px var(--critical-red); }
+    100% { transform: scale(1); box-shadow: 0 0 20px var(--critical-red); }
+}
+
+@keyframes flash-red {
+    from { background-color: rgba(255, 71, 87, 0.1); }
+    to { background-color: rgba(255, 71, 87, 0.4); }
+}

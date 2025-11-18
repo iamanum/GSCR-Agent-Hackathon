@@ -1,0 +1,26 @@
+[
+  {
+    "supplier_id": "SUP001",
+    "name": "Alpha Manufacturing Ltd.",
+    "region": "Asia",
+    "port_of_entry": "Port X", 
+    "is_critical": true,
+    "lead_time_days": 14 
+  },
+  {
+    "supplier_id": "SUP002",
+    "name": "Beta Components SA",
+    "region": "Europe",
+    "port_of_entry": "Port Y",
+    "is_critical": false,
+    "lead_time_days": 7
+  },
+  {
+    "supplier_id": "SUP003",
+    "name": "Gamma Logistics Inc.",
+    "region": "North America",
+    "port_of_entry": "Port Z",
+    "is_critical": true,
+    "lead_time_days": 21
+  }
+]

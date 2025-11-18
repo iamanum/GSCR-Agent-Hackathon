@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSCR Adaptive Orchestration Suite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <header id="risk-header">
+        <h1>GSCR AGENTIC CONTROL CENTER</h1>
+        <div id="status-container">
+            <i class="fas fa-circle" id="status-indicator"></i> 
+            <span id="system-status">System Status: Monitoring</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="panel" id="left-panel">
+            <div id="risk-map-section">
+                <h2><i class="fas fa-globe-americas"></i> Global Risk Sentinel</h2>
+                <div id="risk-visualization">
+                    <p>Routes & Alert Zones Visualization Here</p>
+                    <div id="alert-zone">No Active Geopolitical Alerts.</div>
+                </div>
+            </div>
+
+            <div id="agent-log-section">
+                <h2><i class="fas fa-terminal"></i> Agent Reflection Log</h2>
+                <div id="log-output">
+                    <p class="log-entry log-success">[00:00:01] System Initialized. Awaiting real-time risk feed.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel" id="right-panel">
+            <h2><i class="fas fa-cogs"></i> Orchestration & Decision Center</h2>
+            
+            <div id="risk-analysis" class="data-box">
+                <h3>Risk Impact Summary</h3>
+                <p>Critical SKUs Affected: <span id="sku-count" class="data-value">0</span></p>
+                <p>Total Value at Risk: <span id="value-at-risk" class="data-value">$0</span></p>
+            </div>
+
+            <div id="recommendation-panel" class="data-box">
+                <h3>🏆 Agent Recommendation</h3>
+                <div id="recommendation-details">
+                    <p>Waiting for Critical Alert to Trigger Orchestration...</p>
+                </div>
+                
+                <div id="alternative-comparison">
+                    <h4 style="color: #ccc; margin-top: 15px; border-bottom: 1px dashed #333; padding-bottom: 5px;">Alternative Options Analysis</h4>
+                    <table id="options-table">
+                        <thead>
+                            <tr>
+                                <th>Route</th>
+                                <th>Time</th>
+                                <th>Cost</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            </tbody>
+                    </table>
+                </div>
+
+                <div id="action-buttons">
+                    <button id="approve-btn" disabled>APPROVE AUTO-MITIGATION (Execute Order)</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script> 
+</body>
+</html>

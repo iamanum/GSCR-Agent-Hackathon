@@ -1,0 +1,84 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "GSCR Mitigation Mock API",
+    "version": "1.0.0",
+    "description": "API specification for the GSCR Agent Mock Backend (Python/Flask) that provides risk detection and logistics alternatives."
+  },
+  "servers": [
+    {
+      "url": "https://unrotational-multisaccate-buster.ngrok-free.dev/api", 
+      "description": "Live Mock API Gateway via Ngrok Tunnel"
+    }
+  ],
+  "paths": {
+    "/check_risk/{port_name}": {
+      "get": {
+        "operationId": "check_risk",
+        "summary": "Checks for Critical Geopolitical Risk at a specific port.",
+        "parameters": [
+          {
+            "name": "port_name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success: Returns risk status."
+          }
+        }
+      }
+    },
+    "/get_alternatives/{sku_id}": {
+      "get": {
+        "operationId": "get_alternatives",
+        "summary": "Retrieves logistics quotes and alternatives for a critical SKU.",
+        "parameters": [
+          {
+            "name": "sku_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success: Returns alternatives options."
+          }
+        }
+      }
+    },
+    "/execute_change": {
+      "post": {
+        "operationId": "execute_change",
+        "summary": "Executes the final SCM route change in the ERP system.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "sku_id": { "type": "string" },
+                  "new_supplier_id": { "type": "string" },
+                  "route_name": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success: Route change confirmed."
+          }
+        }
+      }
+    }
+  }
+}
